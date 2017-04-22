@@ -1,0 +1,2703 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/mcavage/node-assert-plus#readme"
+
+    >assert-plus (v1.0.0)</a>
+</h1>
+<h4>Extra assertions on top of node's assert module</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.assert-plus">module assert-plus</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.assert-plus">
+            function <span class="apidocSignatureSpan"></span>assert-plus
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.AssertionError">
+            function <span class="apidocSignatureSpan">assert-plus.</span>AssertionError
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.AssertionError.super_">
+            function <span class="apidocSignatureSpan">assert-plus.</span>AssertionError.super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus._setExports">
+            function <span class="apidocSignatureSpan">assert-plus.</span>_setExports
+            <span class="apidocSignatureSpan">(ndebug)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.array">
+            function <span class="apidocSignatureSpan">assert-plus.</span>array
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.arrayOfArray">
+            function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfArray
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.arrayOfBool">
+            function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfBool
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.arrayOfBuffer">
+            function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfBuffer
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.arrayOfDate">
+            function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfDate
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.arrayOfFinite">
+            function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfFinite
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.arrayOfFunc">
+            function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfFunc
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.arrayOfNumber">
+            function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfNumber
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.arrayOfObject">
+            function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfObject
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.arrayOfRegexp">
+            function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfRegexp
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.arrayOfStream">
+            function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfStream
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.arrayOfString">
+            function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfString
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.arrayOfUuid">
+            function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfUuid
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.bool">
+            function <span class="apidocSignatureSpan">assert-plus.</span>bool
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.buffer">
+            function <span class="apidocSignatureSpan">assert-plus.</span>buffer
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.date">
+            function <span class="apidocSignatureSpan">assert-plus.</span>date
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.deepEqual">
+            function <span class="apidocSignatureSpan">assert-plus.</span>deepEqual
+            <span class="apidocSignatureSpan">(actual, expected, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.deepStrictEqual">
+            function <span class="apidocSignatureSpan">assert-plus.</span>deepStrictEqual
+            <span class="apidocSignatureSpan">(actual, expected, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.doesNotThrow">
+            function <span class="apidocSignatureSpan">assert-plus.</span>doesNotThrow
+            <span class="apidocSignatureSpan">(block, error, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.equal">
+            function <span class="apidocSignatureSpan">assert-plus.</span>equal
+            <span class="apidocSignatureSpan">(actual, expected, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.fail">
+            function <span class="apidocSignatureSpan">assert-plus.</span>fail
+            <span class="apidocSignatureSpan">(actual, expected, message, operator, stackStartFunction)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.finite">
+            function <span class="apidocSignatureSpan">assert-plus.</span>finite
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.func">
+            function <span class="apidocSignatureSpan">assert-plus.</span>func
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.ifError">
+            function <span class="apidocSignatureSpan">assert-plus.</span>ifError
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.notDeepEqual">
+            function <span class="apidocSignatureSpan">assert-plus.</span>notDeepEqual
+            <span class="apidocSignatureSpan">(actual, expected, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.notDeepStrictEqual">
+            function <span class="apidocSignatureSpan">assert-plus.</span>notDeepStrictEqual
+            <span class="apidocSignatureSpan">(actual, expected, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.notEqual">
+            function <span class="apidocSignatureSpan">assert-plus.</span>notEqual
+            <span class="apidocSignatureSpan">(actual, expected, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.notStrictEqual">
+            function <span class="apidocSignatureSpan">assert-plus.</span>notStrictEqual
+            <span class="apidocSignatureSpan">(actual, expected, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.number">
+            function <span class="apidocSignatureSpan">assert-plus.</span>number
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.object">
+            function <span class="apidocSignatureSpan">assert-plus.</span>object
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.ok">
+            function <span class="apidocSignatureSpan">assert-plus.</span>ok
+            <span class="apidocSignatureSpan">(value, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalArray">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalArray
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalArrayOfArray">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfArray
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalArrayOfBool">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfBool
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalArrayOfBuffer">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfBuffer
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalArrayOfDate">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfDate
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalArrayOfFinite">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfFinite
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalArrayOfFunc">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfFunc
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalArrayOfNumber">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfNumber
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalArrayOfObject">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfObject
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalArrayOfRegexp">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfRegexp
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalArrayOfStream">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfStream
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalArrayOfString">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfString
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalArrayOfUuid">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfUuid
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalBool">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalBool
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalBuffer">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalBuffer
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalDate">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalDate
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalFinite">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalFinite
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalFunc">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalFunc
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalNumber">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalNumber
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalObject">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalObject
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalRegexp">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalRegexp
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalStream">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalStream
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalString">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalString
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.optionalUuid">
+            function <span class="apidocSignatureSpan">assert-plus.</span>optionalUuid
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.regexp">
+            function <span class="apidocSignatureSpan">assert-plus.</span>regexp
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.stream">
+            function <span class="apidocSignatureSpan">assert-plus.</span>stream
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.strictEqual">
+            function <span class="apidocSignatureSpan">assert-plus.</span>strictEqual
+            <span class="apidocSignatureSpan">(actual, expected, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.string">
+            function <span class="apidocSignatureSpan">assert-plus.</span>string
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.throws">
+            function <span class="apidocSignatureSpan">assert-plus.</span>throws
+            <span class="apidocSignatureSpan">(block, error, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.uuid">
+            function <span class="apidocSignatureSpan">assert-plus.</span>uuid
+            <span class="apidocSignatureSpan">(arg, msg)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.assert-plus.AssertionError">module assert-plus.AssertionError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.AssertionError.AssertionError">
+            function <span class="apidocSignatureSpan">assert-plus.</span>AssertionError
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.AssertionError.super_">
+            function <span class="apidocSignatureSpan">assert-plus.AssertionError.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.assert-plus.AssertionError.super_">module assert-plus.AssertionError.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.AssertionError.super_.super_">
+            function <span class="apidocSignatureSpan">assert-plus.AssertionError.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.AssertionError.super_.captureStackTrace">
+            function <span class="apidocSignatureSpan">assert-plus.AssertionError.super_.</span>captureStackTrace
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">assert-plus.AssertionError.super_.</span>stackTraceLimit</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.assert-plus.ok">module assert-plus.ok</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.ok.ok">
+            function <span class="apidocSignatureSpan">assert-plus.</span>ok
+            <span class="apidocSignatureSpan">(value, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.ok.AssertionError">
+            function <span class="apidocSignatureSpan">assert-plus.ok.</span>AssertionError
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.ok.deepEqual">
+            function <span class="apidocSignatureSpan">assert-plus.ok.</span>deepEqual
+            <span class="apidocSignatureSpan">(actual, expected, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.ok.deepStrictEqual">
+            function <span class="apidocSignatureSpan">assert-plus.ok.</span>deepStrictEqual
+            <span class="apidocSignatureSpan">(actual, expected, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.ok.doesNotThrow">
+            function <span class="apidocSignatureSpan">assert-plus.ok.</span>doesNotThrow
+            <span class="apidocSignatureSpan">(block, error, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.ok.equal">
+            function <span class="apidocSignatureSpan">assert-plus.ok.</span>equal
+            <span class="apidocSignatureSpan">(actual, expected, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.ok.fail">
+            function <span class="apidocSignatureSpan">assert-plus.ok.</span>fail
+            <span class="apidocSignatureSpan">(actual, expected, message, operator, stackStartFunction)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.ok.ifError">
+            function <span class="apidocSignatureSpan">assert-plus.ok.</span>ifError
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.ok.notDeepEqual">
+            function <span class="apidocSignatureSpan">assert-plus.ok.</span>notDeepEqual
+            <span class="apidocSignatureSpan">(actual, expected, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.ok.notDeepStrictEqual">
+            function <span class="apidocSignatureSpan">assert-plus.ok.</span>notDeepStrictEqual
+            <span class="apidocSignatureSpan">(actual, expected, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.ok.notEqual">
+            function <span class="apidocSignatureSpan">assert-plus.ok.</span>notEqual
+            <span class="apidocSignatureSpan">(actual, expected, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.ok.notStrictEqual">
+            function <span class="apidocSignatureSpan">assert-plus.ok.</span>notStrictEqual
+            <span class="apidocSignatureSpan">(actual, expected, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.ok.strictEqual">
+            function <span class="apidocSignatureSpan">assert-plus.ok.</span>strictEqual
+            <span class="apidocSignatureSpan">(actual, expected, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.assert-plus.ok.throws">
+            function <span class="apidocSignatureSpan">assert-plus.ok.</span>throws
+            <span class="apidocSignatureSpan">(block, error, message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.assert-plus" id="apidoc.module.assert-plus">module assert-plus</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.assert-plus" id="apidoc.element.assert-plus.assert-plus">
+        function <span class="apidocSignatureSpan"></span>assert-plus
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">assert-plus = function (arg, msg) {
+    if (!arg) {
+        _toss(msg, &#x27;true&#x27;, arg);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.AssertionError" id="apidoc.element.assert-plus.AssertionError">
+        function <span class="apidocSignatureSpan">assert-plus.</span>AssertionError
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AssertionError(options) {
+  this.name = &#x27;AssertionError&#x27;;
+  this.actual = options.actual;
+  this.expected = options.expected;
+  this.operator = options.operator;
+  if (options.message) {
+    this.message = options.message;
+    this.generatedMessage = false;
+  } else {
+    this.message = getMessage(this);
+    this.generatedMessage = true;
+  }
+  var stackStartFunction = options.stackStartFunction || fail;
+  Error.captureStackTrace(this, stackStartFunction);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.AssertionError.super_" id="apidoc.element.assert-plus.AssertionError.super_">
+        function <span class="apidocSignatureSpan">assert-plus.</span>AssertionError.super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Error() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus._setExports" id="apidoc.element.assert-plus._setExports">
+        function <span class="apidocSignatureSpan">assert-plus.</span>_setExports
+        <span class="apidocSignatureSpan">(ndebug)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _setExports(ndebug) {
+    var keys = Object.keys(types);
+    var out;
+
+<span class="apidocCodeCommentSpan">    /* re-export standard assert */
+</span>    if (process.env.NODE_NDEBUG) {
+        out = noop;
+    } else {
+        out = function (arg, msg) {
+            if (!arg) {
+                _toss(msg, &#x27;true&#x27;, arg);
+            }
+        };
+    }
+
+    /* standard checks */
+    keys.forEach(function (k) {
+        if (ndebug) {
+            out[k] = noop;
+            return;
+        }
+        var type = types[k];
+        out[k] = function (arg, msg) {
+            if (!type.check(arg)) {
+                _toss(msg, k, type.operator, arg, type.actual);
+            }
+        };
+    });
+
+    /* optional checks */
+    keys.forEach(function (k) {
+        var name = &#x27;optional&#x27; + _capitalize(k);
+        if (ndebug) {
+            out[name] = noop;
+            return;
+        }
+        var type = types[k];
+        out[name] = function (arg, msg) {
+            if (arg === undefined || arg === null) {
+                return;
+            }
+            if (!type.check(arg)) {
+                _toss(msg, k, type.operator, arg, type.actual);
+            }
+        };
+    });
+
+    /* arrayOf checks */
+    keys.forEach(function (k) {
+        var name = &#x27;arrayOf&#x27; + _capitalize(k);
+        if (ndebug) {
+            out[name] = noop;
+            return;
+        }
+        var type = types[k];
+        var expected = &#x27;[&#x27; + k + &#x27;]&#x27;;
+        out[name] = function (arg, msg) {
+            if (!Array.isArray(arg)) {
+                _toss(msg, expected, type.operator, arg, type.actual);
+            }
+            var i;
+            for (i = 0; i &#x3c; arg.length; i++) {
+                if (!type.check(arg[i])) {
+                    _toss(msg, expected, type.operator, arg, type.actual);
+                }
+            }
+        };
+    });
+
+    /* optionalArrayOf checks */
+    keys.forEach(function (k) {
+        var name = &#x27;optionalArrayOf&#x27; + _capitalize(k);
+        if (ndebug) {
+            out[name] = noop;
+            return;
+        }
+        var type = types[k];
+        var expected = &#x27;[&#x27; + k + &#x27;]&#x27;;
+        out[name] = function (arg, msg) {
+            if (arg === undefined || arg === null) {
+                return;
+            }
+            if (!Array.isArray(arg)) {
+                _toss(msg, expected, type.operator, arg, type.actual);
+            }
+            var i;
+            for (i = 0; i &#x3c; arg.length; i++) {
+                if (!type.check(arg[i])) {
+                    _toss(msg, expected, type.operator, arg, type.actual);
+                }
+            }
+        };
+    });
+
+    /* re-export built-in assertions */
+    Object.keys(assert).forEach(function (k) {
+        if (k === &#x27;AssertionError&#x27;) {
+            out[k] = assert[k];
+            return;
+        }
+        if (ndebug) {
+            out[k] = noop;
+            return;
+        }
+        out[k] = assert[k];
+    });
+
+    /* export ourselves (for unit tests _only_) */
+    out._setExports = _setExports;
+
+    return out;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.array" id="apidoc.element.assert-plus.array">
+        function <span class="apidocSignatureSpan">assert-plus.</span>array
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">array = function (arg, msg) {
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.arrayOfArray" id="apidoc.element.assert-plus.arrayOfArray">
+        function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfArray
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arrayOfArray = function (arg, msg) {
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.arrayOfBool" id="apidoc.element.assert-plus.arrayOfBool">
+        function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfBool
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arrayOfBool = function (arg, msg) {
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.arrayOfBuffer" id="apidoc.element.assert-plus.arrayOfBuffer">
+        function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfBuffer
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arrayOfBuffer = function (arg, msg) {
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.arrayOfDate" id="apidoc.element.assert-plus.arrayOfDate">
+        function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfDate
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arrayOfDate = function (arg, msg) {
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.arrayOfFinite" id="apidoc.element.assert-plus.arrayOfFinite">
+        function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfFinite
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arrayOfFinite = function (arg, msg) {
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.arrayOfFunc" id="apidoc.element.assert-plus.arrayOfFunc">
+        function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfFunc
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arrayOfFunc = function (arg, msg) {
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.arrayOfNumber" id="apidoc.element.assert-plus.arrayOfNumber">
+        function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfNumber
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arrayOfNumber = function (arg, msg) {
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.arrayOfObject" id="apidoc.element.assert-plus.arrayOfObject">
+        function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfObject
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arrayOfObject = function (arg, msg) {
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.arrayOfRegexp" id="apidoc.element.assert-plus.arrayOfRegexp">
+        function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfRegexp
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arrayOfRegexp = function (arg, msg) {
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.arrayOfStream" id="apidoc.element.assert-plus.arrayOfStream">
+        function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfStream
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arrayOfStream = function (arg, msg) {
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.arrayOfString" id="apidoc.element.assert-plus.arrayOfString">
+        function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfString
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arrayOfString = function (arg, msg) {
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var assert = require(&#x27;assert-plus&#x27;);
+
+    function fooAccount(options, callback) {
+        assert.object(options, &#x27;options&#x27;);
+        assert.number(options.id, &#x27;options.id&#x27;);
+        assert.bool(options.isManager, &#x27;options.isManager&#x27;);
+        assert.string(options.name, &#x27;options.name&#x27;);
+        assert.<span class="apidocCodeKeywordSpan">arrayOfString</span>(options.email, &#x27;options.email&#x27;);
+        assert.func(callback, &#x27;callback&#x27;);
+
+        // Do stuff
+        callback(null, {});
+    }
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.arrayOfUuid" id="apidoc.element.assert-plus.arrayOfUuid">
+        function <span class="apidocSignatureSpan">assert-plus.</span>arrayOfUuid
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arrayOfUuid = function (arg, msg) {
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.bool" id="apidoc.element.assert-plus.bool">
+        function <span class="apidocSignatureSpan">assert-plus.</span>bool
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bool = function (arg, msg) {
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```javascript
+var assert = require(&#x27;assert-plus&#x27;);
+
+function fooAccount(options, callback) {
+    assert.object(options, &#x27;options&#x27;);
+    assert.number(options.id, &#x27;options.id&#x27;);
+    assert.<span class="apidocCodeKeywordSpan">bool</span>(options.isManager, &#x27;options.isManager&#x27;);
+    assert.string(options.name, &#x27;options.name&#x27;);
+    assert.arrayOfString(options.email, &#x27;options.email&#x27;);
+    assert.func(callback, &#x27;callback&#x27;);
+
+    // Do stuff
+    callback(null, {});
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.buffer" id="apidoc.element.assert-plus.buffer">
+        function <span class="apidocSignatureSpan">assert-plus.</span>buffer
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buffer = function (arg, msg) {
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.date" id="apidoc.element.assert-plus.date">
+        function <span class="apidocSignatureSpan">assert-plus.</span>date
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">date = function (arg, msg) {
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.deepEqual" id="apidoc.element.assert-plus.deepEqual">
+        function <span class="apidocSignatureSpan">assert-plus.</span>deepEqual
+        <span class="apidocSignatureSpan">(actual, expected, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deepEqual(actual, expected, message) {
+  if (!_deepEqual(actual, expected, false)) {
+    fail(actual, expected, message, &#x27;deepEqual&#x27;, assert.deepEqual);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.deepStrictEqual" id="apidoc.element.assert-plus.deepStrictEqual">
+        function <span class="apidocSignatureSpan">assert-plus.</span>deepStrictEqual
+        <span class="apidocSignatureSpan">(actual, expected, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deepStrictEqual(actual, expected, message) {
+  if (!_deepEqual(actual, expected, true)) {
+    fail(actual, expected, message, &#x27;deepStrictEqual&#x27;, assert.deepStrictEqual);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.doesNotThrow" id="apidoc.element.assert-plus.doesNotThrow">
+        function <span class="apidocSignatureSpan">assert-plus.</span>doesNotThrow
+        <span class="apidocSignatureSpan">(block, error, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">doesNotThrow = function (block, error, message) {
+  _throws(false, block, error, message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.equal" id="apidoc.element.assert-plus.equal">
+        function <span class="apidocSignatureSpan">assert-plus.</span>equal
+        <span class="apidocSignatureSpan">(actual, expected, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equal(actual, expected, message) {
+  if (actual != expected) fail(actual, expected, message, &#x27;==&#x27;, assert.equal);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.fail" id="apidoc.element.assert-plus.fail">
+        function <span class="apidocSignatureSpan">assert-plus.</span>fail
+        <span class="apidocSignatureSpan">(actual, expected, message, operator, stackStartFunction)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fail(actual, expected, message, operator, stackStartFunction) {
+  throw new assert.AssertionError({
+    message: message,
+    actual: actual,
+    expected: expected,
+    operator: operator,
+    stackStartFunction: stackStartFunction
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.finite" id="apidoc.element.assert-plus.finite">
+        function <span class="apidocSignatureSpan">assert-plus.</span>finite
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">finite = function (arg, msg) {
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.func" id="apidoc.element.assert-plus.func">
+        function <span class="apidocSignatureSpan">assert-plus.</span>func
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">func = function (arg, msg) {
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    function fooAccount(options, callback) {
+        assert.object(options, &#x27;options&#x27;);
+        assert.number(options.id, &#x27;options.id&#x27;);
+        assert.bool(options.isManager, &#x27;options.isManager&#x27;);
+        assert.string(options.name, &#x27;options.name&#x27;);
+        assert.arrayOfString(options.email, &#x27;options.email&#x27;);
+        assert.<span class="apidocCodeKeywordSpan">func</span>(callback, &#x27;callback&#x27;);
+
+        // Do stuff
+        callback(null, {});
+    }
+```
+
+# API
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.ifError" id="apidoc.element.assert-plus.ifError">
+        function <span class="apidocSignatureSpan">assert-plus.</span>ifError
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ifError = function (err) { if (err) throw err; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.notDeepEqual" id="apidoc.element.assert-plus.notDeepEqual">
+        function <span class="apidocSignatureSpan">assert-plus.</span>notDeepEqual
+        <span class="apidocSignatureSpan">(actual, expected, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function notDeepEqual(actual, expected, message) {
+  if (_deepEqual(actual, expected, false)) {
+    fail(actual, expected, message, &#x27;notDeepEqual&#x27;, assert.notDeepEqual);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.notDeepStrictEqual" id="apidoc.element.assert-plus.notDeepStrictEqual">
+        function <span class="apidocSignatureSpan">assert-plus.</span>notDeepStrictEqual
+        <span class="apidocSignatureSpan">(actual, expected, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function notDeepStrictEqual(actual, expected, message) {
+  if (_deepEqual(actual, expected, true)) {
+    fail(actual, expected, message, &#x27;notDeepStrictEqual&#x27;, notDeepStrictEqual);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.notEqual" id="apidoc.element.assert-plus.notEqual">
+        function <span class="apidocSignatureSpan">assert-plus.</span>notEqual
+        <span class="apidocSignatureSpan">(actual, expected, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function notEqual(actual, expected, message) {
+  if (actual == expected) {
+    fail(actual, expected, message, &#x27;!=&#x27;, assert.notEqual);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.notStrictEqual" id="apidoc.element.assert-plus.notStrictEqual">
+        function <span class="apidocSignatureSpan">assert-plus.</span>notStrictEqual
+        <span class="apidocSignatureSpan">(actual, expected, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function notStrictEqual(actual, expected, message) {
+  if (actual === expected) {
+    fail(actual, expected, message, &#x27;!==&#x27;, assert.notStrictEqual);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.number" id="apidoc.element.assert-plus.number">
+        function <span class="apidocSignatureSpan">assert-plus.</span>number
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">number = function (arg, msg) {
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+like this:
+
+```javascript
+    var assert = require(&#x27;assert-plus&#x27;);
+
+    function fooAccount(options, callback) {
+assert.object(options, &#x27;options&#x27;);
+assert.<span class="apidocCodeKeywordSpan">number</span>(options.id, &#x27;options.id&#x27;);
+assert.bool(options.isManager, &#x27;options.isManager&#x27;);
+assert.string(options.name, &#x27;options.name&#x27;);
+assert.arrayOfString(options.email, &#x27;options.email&#x27;);
+assert.func(callback, &#x27;callback&#x27;);
+
+// Do stuff
+callback(null, {});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.object" id="apidoc.element.assert-plus.object">
+        function <span class="apidocSignatureSpan">assert-plus.</span>object
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">object = function (arg, msg) {
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+`assert.string(myArg, &#x27;myArg&#x27;)`.  As a simple example, most of my code looks
+like this:
+
+```javascript
+    var assert = require(&#x27;assert-plus&#x27;);
+
+    function fooAccount(options, callback) {
+assert.<span class="apidocCodeKeywordSpan">object</span>(options, &#x27;options&#x27;);
+assert.number(options.id, &#x27;options.id&#x27;);
+assert.bool(options.isManager, &#x27;options.isManager&#x27;);
+assert.string(options.name, &#x27;options.name&#x27;);
+assert.arrayOfString(options.email, &#x27;options.email&#x27;);
+assert.func(callback, &#x27;callback&#x27;);
+
+// Do stuff
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.ok" id="apidoc.element.assert-plus.ok">
+        function <span class="apidocSignatureSpan">assert-plus.</span>ok
+        <span class="apidocSignatureSpan">(value, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ok(value, message) {
+  if (!value) fail(value, true, message, &#x27;==&#x27;, assert.ok);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalArray" id="apidoc.element.assert-plus.optionalArray">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalArray
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalArray = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalArrayOfArray" id="apidoc.element.assert-plus.optionalArrayOfArray">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfArray
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalArrayOfArray = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalArrayOfBool" id="apidoc.element.assert-plus.optionalArrayOfBool">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfBool
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalArrayOfBool = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalArrayOfBuffer" id="apidoc.element.assert-plus.optionalArrayOfBuffer">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfBuffer
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalArrayOfBuffer = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalArrayOfDate" id="apidoc.element.assert-plus.optionalArrayOfDate">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfDate
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalArrayOfDate = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalArrayOfFinite" id="apidoc.element.assert-plus.optionalArrayOfFinite">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfFinite
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalArrayOfFinite = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalArrayOfFunc" id="apidoc.element.assert-plus.optionalArrayOfFunc">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfFunc
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalArrayOfFunc = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalArrayOfNumber" id="apidoc.element.assert-plus.optionalArrayOfNumber">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfNumber
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalArrayOfNumber = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalArrayOfObject" id="apidoc.element.assert-plus.optionalArrayOfObject">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfObject
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalArrayOfObject = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalArrayOfRegexp" id="apidoc.element.assert-plus.optionalArrayOfRegexp">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfRegexp
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalArrayOfRegexp = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalArrayOfStream" id="apidoc.element.assert-plus.optionalArrayOfStream">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfStream
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalArrayOfStream = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalArrayOfString" id="apidoc.element.assert-plus.optionalArrayOfString">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfString
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalArrayOfString = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalArrayOfUuid" id="apidoc.element.assert-plus.optionalArrayOfUuid">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalArrayOfUuid
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalArrayOfUuid = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!Array.isArray(arg)) {
+        _toss(msg, expected, type.operator, arg, type.actual);
+    }
+    var i;
+    for (i = 0; i &#x3c; arg.length; i++) {
+        if (!type.check(arg[i])) {
+            _toss(msg, expected, type.operator, arg, type.actual);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalBool" id="apidoc.element.assert-plus.optionalBool">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalBool
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalBool = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalBuffer" id="apidoc.element.assert-plus.optionalBuffer">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalBuffer
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalBuffer = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalDate" id="apidoc.element.assert-plus.optionalDate">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalDate
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalDate = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalFinite" id="apidoc.element.assert-plus.optionalFinite">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalFinite
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalFinite = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalFunc" id="apidoc.element.assert-plus.optionalFunc">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalFunc
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalFunc = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalNumber" id="apidoc.element.assert-plus.optionalNumber">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalNumber
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalNumber = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalObject" id="apidoc.element.assert-plus.optionalObject">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalObject
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalObject = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalRegexp" id="apidoc.element.assert-plus.optionalRegexp">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalRegexp
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalRegexp = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalStream" id="apidoc.element.assert-plus.optionalStream">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalStream
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalStream = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalString" id="apidoc.element.assert-plus.optionalString">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalString
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalString = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        assert.arrayOfString(foo, &#x27;foo&#x27;);
+    }
+```
+
+You can assert IFF an argument is not `undefined` (i.e., an optional arg):
+
+```javascript
+    assert.<span class="apidocCodeKeywordSpan">optionalString</span>(foo, &#x27;foo&#x27;);
+```
+
+Lastly, you can opt-out of assertion checking altogether by setting the
+environment variable `NODE_NDEBUG=1`.  This is pseudo-useful if you have
+lots of assertions, and don&#x27;t want to pay `typeof ()` taxes to v8 in
+production.  Be advised:  The standard functions re-exported from `assert` are
+also disabled in assert-plus if NDEBUG is specified.  Using them directly from
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.optionalUuid" id="apidoc.element.assert-plus.optionalUuid">
+        function <span class="apidocSignatureSpan">assert-plus.</span>optionalUuid
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionalUuid = function (arg, msg) {
+    if (arg === undefined || arg === null) {
+        return;
+    }
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.regexp" id="apidoc.element.assert-plus.regexp">
+        function <span class="apidocSignatureSpan">assert-plus.</span>regexp
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">regexp = function (arg, msg) {
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.stream" id="apidoc.element.assert-plus.stream">
+        function <span class="apidocSignatureSpan">assert-plus.</span>stream
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stream = function (arg, msg) {
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.strictEqual" id="apidoc.element.assert-plus.strictEqual">
+        function <span class="apidocSignatureSpan">assert-plus.</span>strictEqual
+        <span class="apidocSignatureSpan">(actual, expected, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function strictEqual(actual, expected, message) {
+  if (actual !== expected) {
+    fail(actual, expected, message, &#x27;===&#x27;, assert.strictEqual);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.string" id="apidoc.element.assert-plus.string">
+        function <span class="apidocSignatureSpan">assert-plus.</span>string
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">string = function (arg, msg) {
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+# assert-plus
+
+This library is a super small wrapper over node&#x27;s assert module that has two
+things: (1) the ability to disable assertions with the environment variable
+NODE\_NDEBUG, and (2) some API wrappers for argument testing.  Like
+`assert.<span class="apidocCodeKeywordSpan">string</span>(myArg, &#x27;myArg&#x27;)`.  As a simple example, most of my code looks
+like this:
+
+```javascript
+var assert = require(&#x27;assert-plus&#x27;);
+
+function fooAccount(options, callback) {
+    assert.object(options, &#x27;options&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.throws" id="apidoc.element.assert-plus.throws">
+        function <span class="apidocSignatureSpan">assert-plus.</span>throws
+        <span class="apidocSignatureSpan">(block, error, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">throws = function (block, error, message) {
+  _throws(true, block, error, message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.uuid" id="apidoc.element.assert-plus.uuid">
+        function <span class="apidocSignatureSpan">assert-plus.</span>uuid
+        <span class="apidocSignatureSpan">(arg, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uuid = function (arg, msg) {
+    if (!type.check(arg)) {
+        _toss(msg, k, type.operator, arg, type.actual);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.assert-plus.AssertionError" id="apidoc.module.assert-plus.AssertionError">module assert-plus.AssertionError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.AssertionError.AssertionError" id="apidoc.element.assert-plus.AssertionError.AssertionError">
+        function <span class="apidocSignatureSpan">assert-plus.</span>AssertionError
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AssertionError(options) {
+  this.name = &#x27;AssertionError&#x27;;
+  this.actual = options.actual;
+  this.expected = options.expected;
+  this.operator = options.operator;
+  if (options.message) {
+    this.message = options.message;
+    this.generatedMessage = false;
+  } else {
+    this.message = getMessage(this);
+    this.generatedMessage = true;
+  }
+  var stackStartFunction = options.stackStartFunction || fail;
+  Error.captureStackTrace(this, stackStartFunction);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.AssertionError.super_" id="apidoc.element.assert-plus.AssertionError.super_">
+        function <span class="apidocSignatureSpan">assert-plus.AssertionError.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Error() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.assert-plus.AssertionError.super_" id="apidoc.module.assert-plus.AssertionError.super_">module assert-plus.AssertionError.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.AssertionError.super_.super_" id="apidoc.element.assert-plus.AssertionError.super_.super_">
+        function <span class="apidocSignatureSpan">assert-plus.AssertionError.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Error() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.AssertionError.super_.captureStackTrace" id="apidoc.element.assert-plus.AssertionError.super_.captureStackTrace">
+        function <span class="apidocSignatureSpan">assert-plus.AssertionError.super_.</span>captureStackTrace
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function captureStackTrace() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.assert-plus.ok" id="apidoc.module.assert-plus.ok">module assert-plus.ok</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.ok.ok" id="apidoc.element.assert-plus.ok.ok">
+        function <span class="apidocSignatureSpan">assert-plus.</span>ok
+        <span class="apidocSignatureSpan">(value, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ok(value, message) {
+  if (!value) fail(value, true, message, &#x27;==&#x27;, assert.ok);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.ok.AssertionError" id="apidoc.element.assert-plus.ok.AssertionError">
+        function <span class="apidocSignatureSpan">assert-plus.ok.</span>AssertionError
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AssertionError(options) {
+  this.name = &#x27;AssertionError&#x27;;
+  this.actual = options.actual;
+  this.expected = options.expected;
+  this.operator = options.operator;
+  if (options.message) {
+    this.message = options.message;
+    this.generatedMessage = false;
+  } else {
+    this.message = getMessage(this);
+    this.generatedMessage = true;
+  }
+  var stackStartFunction = options.stackStartFunction || fail;
+  Error.captureStackTrace(this, stackStartFunction);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.ok.deepEqual" id="apidoc.element.assert-plus.ok.deepEqual">
+        function <span class="apidocSignatureSpan">assert-plus.ok.</span>deepEqual
+        <span class="apidocSignatureSpan">(actual, expected, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deepEqual(actual, expected, message) {
+  if (!_deepEqual(actual, expected, false)) {
+    fail(actual, expected, message, &#x27;deepEqual&#x27;, assert.deepEqual);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.ok.deepStrictEqual" id="apidoc.element.assert-plus.ok.deepStrictEqual">
+        function <span class="apidocSignatureSpan">assert-plus.ok.</span>deepStrictEqual
+        <span class="apidocSignatureSpan">(actual, expected, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deepStrictEqual(actual, expected, message) {
+  if (!_deepEqual(actual, expected, true)) {
+    fail(actual, expected, message, &#x27;deepStrictEqual&#x27;, assert.deepStrictEqual);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.ok.doesNotThrow" id="apidoc.element.assert-plus.ok.doesNotThrow">
+        function <span class="apidocSignatureSpan">assert-plus.ok.</span>doesNotThrow
+        <span class="apidocSignatureSpan">(block, error, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">doesNotThrow = function (block, error, message) {
+  _throws(false, block, error, message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.ok.equal" id="apidoc.element.assert-plus.ok.equal">
+        function <span class="apidocSignatureSpan">assert-plus.ok.</span>equal
+        <span class="apidocSignatureSpan">(actual, expected, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equal(actual, expected, message) {
+  if (actual != expected) fail(actual, expected, message, &#x27;==&#x27;, assert.equal);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.ok.fail" id="apidoc.element.assert-plus.ok.fail">
+        function <span class="apidocSignatureSpan">assert-plus.ok.</span>fail
+        <span class="apidocSignatureSpan">(actual, expected, message, operator, stackStartFunction)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fail(actual, expected, message, operator, stackStartFunction) {
+  throw new assert.AssertionError({
+    message: message,
+    actual: actual,
+    expected: expected,
+    operator: operator,
+    stackStartFunction: stackStartFunction
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.ok.ifError" id="apidoc.element.assert-plus.ok.ifError">
+        function <span class="apidocSignatureSpan">assert-plus.ok.</span>ifError
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ifError = function (err) { if (err) throw err; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.ok.notDeepEqual" id="apidoc.element.assert-plus.ok.notDeepEqual">
+        function <span class="apidocSignatureSpan">assert-plus.ok.</span>notDeepEqual
+        <span class="apidocSignatureSpan">(actual, expected, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function notDeepEqual(actual, expected, message) {
+  if (_deepEqual(actual, expected, false)) {
+    fail(actual, expected, message, &#x27;notDeepEqual&#x27;, assert.notDeepEqual);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.ok.notDeepStrictEqual" id="apidoc.element.assert-plus.ok.notDeepStrictEqual">
+        function <span class="apidocSignatureSpan">assert-plus.ok.</span>notDeepStrictEqual
+        <span class="apidocSignatureSpan">(actual, expected, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function notDeepStrictEqual(actual, expected, message) {
+  if (_deepEqual(actual, expected, true)) {
+    fail(actual, expected, message, &#x27;notDeepStrictEqual&#x27;, notDeepStrictEqual);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.ok.notEqual" id="apidoc.element.assert-plus.ok.notEqual">
+        function <span class="apidocSignatureSpan">assert-plus.ok.</span>notEqual
+        <span class="apidocSignatureSpan">(actual, expected, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function notEqual(actual, expected, message) {
+  if (actual == expected) {
+    fail(actual, expected, message, &#x27;!=&#x27;, assert.notEqual);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.ok.notStrictEqual" id="apidoc.element.assert-plus.ok.notStrictEqual">
+        function <span class="apidocSignatureSpan">assert-plus.ok.</span>notStrictEqual
+        <span class="apidocSignatureSpan">(actual, expected, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function notStrictEqual(actual, expected, message) {
+  if (actual === expected) {
+    fail(actual, expected, message, &#x27;!==&#x27;, assert.notStrictEqual);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.ok.strictEqual" id="apidoc.element.assert-plus.ok.strictEqual">
+        function <span class="apidocSignatureSpan">assert-plus.ok.</span>strictEqual
+        <span class="apidocSignatureSpan">(actual, expected, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function strictEqual(actual, expected, message) {
+  if (actual !== expected) {
+    fail(actual, expected, message, &#x27;===&#x27;, assert.strictEqual);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.assert-plus.ok.throws" id="apidoc.element.assert-plus.ok.throws">
+        function <span class="apidocSignatureSpan">assert-plus.ok.</span>throws
+        <span class="apidocSignatureSpan">(block, error, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">throws = function (block, error, message) {
+  _throws(true, block, error, message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
