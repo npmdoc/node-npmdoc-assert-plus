@@ -866,7 +866,23 @@
   var stackStartFunction = options.stackStartFunction || fail;
   Error.captureStackTrace(this, stackStartFunction);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+///--- Internal
+
+function _capitalize(str) {
+    return (str.charAt(0).toUpperCase() + str.slice(1));
+}
+
+function _toss(name, expected, oper, arg, actual) {
+    throw new assert.<span class="apidocCodeKeywordSpan">AssertionError</span>({
+        message: util.format('%s (%s) is required', name, expected),
+        actual: (actual === undefined) ? typeof (arg) : actual(arg),
+        expected: expected,
+        operator: oper || '===',
+        stackStartFunction: _toss.caller
+    });
+}
+...</pre></li>
     </ul>
 
 
@@ -1645,21 +1661,17 @@ callback(null, {});
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-`assert.string(myArg, 'myArg')`.  As a simple example, most of my code looks
-like this:
 
-```javascript
-    var assert = require('assert-plus');
+- *BREAKING* assert.number (and derivatives) now accept Infinity as valid input
+- Add assert.finite check.  Previous assert.number callers should use this if
+  they expect Infinity inputs to throw.
 
-    function fooAccount(options, callback) {
-assert.<span class="apidocCodeKeywordSpan">object</span>(options, 'options');
-assert.number(options.id, 'options.id');
-assert.bool(options.isManager, 'options.isManager');
-assert.string(options.name, 'options.name');
-assert.arrayOfString(options.email, 'options.email');
-assert.func(callback, 'callback');
+## 0.2.0
 
-// Do stuff
+- Fix `assert.<span class="apidocCodeKeywordSpan">object</span>(null)` so it throws
+- Fix optional/arrayOf exports for non-type-of asserts
+- Add optiona/arrayOf exports for Stream/Date/Regex/uuid
+- Add basic unit test coverage
 ...</pre></li>
     </ul>
 
@@ -2391,7 +2403,23 @@ function fooAccount(options, callback) {
   var stackStartFunction = options.stackStartFunction || fail;
   Error.captureStackTrace(this, stackStartFunction);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+///--- Internal
+
+function _capitalize(str) {
+    return (str.charAt(0).toUpperCase() + str.slice(1));
+}
+
+function _toss(name, expected, oper, arg, actual) {
+    throw new assert.<span class="apidocCodeKeywordSpan">AssertionError</span>({
+        message: util.format('%s (%s) is required', name, expected),
+        actual: (actual === undefined) ? typeof (arg) : actual(arg),
+        expected: expected,
+        operator: oper || '===',
+        stackStartFunction: _toss.caller
+    });
+}
+...</pre></li>
     </ul>
 
 
@@ -2484,7 +2512,23 @@ function fooAccount(options, callback) {
   var stackStartFunction = options.stackStartFunction || fail;
   Error.captureStackTrace(this, stackStartFunction);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+///--- Internal
+
+function _capitalize(str) {
+    return (str.charAt(0).toUpperCase() + str.slice(1));
+}
+
+function _toss(name, expected, oper, arg, actual) {
+    throw new assert.<span class="apidocCodeKeywordSpan">AssertionError</span>({
+        message: util.format('%s (%s) is required', name, expected),
+        actual: (actual === undefined) ? typeof (arg) : actual(arg),
+        expected: expected,
+        operator: oper || '===',
+        stackStartFunction: _toss.caller
+    });
+}
+...</pre></li>
     </ul>
 
 
