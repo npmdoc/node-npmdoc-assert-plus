@@ -1,6 +1,6 @@
 # npmdoc-assert-plus
 
-#### api documentation for  [assert-plus (v1.0.0)](https://github.com/mcavage/node-assert-plus#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-assert-plus.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-assert-plus) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-assert-plus.svg)](https://travis-ci.org/npmdoc/node-npmdoc-assert-plus)
+#### basic api documentation for  [assert-plus (v1.0.0)](https://github.com/mcavage/node-assert-plus#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-assert-plus.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-assert-plus) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-assert-plus.svg)](https://travis-ci.org/npmdoc/node-npmdoc-assert-plus)
 
 #### Extra assertions on top of node's assert module
 
